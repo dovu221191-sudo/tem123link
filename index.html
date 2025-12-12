@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting…</title>
+    <script>
+        (function () {
+            var path = location.pathname.replace(/^\/+|\/+$/g, "");
+            var url = path || "";
+
+            // lấy id từ URL
+            var id = new URLSearchParams(location.search).get("id");
+            if (!id && url) id = url;
+
+            if (id) {
+                var target = "https://script.google.com/macros/s/AKfycbwPp9d3nwp7xzI1B6FZ1gAgZOoW5rK0Cdd0vS4P2xgLk9bd8SuEJ83S2/exec?id=" + id;
+                location.replace(target);
+            }
+        })();
+    </script>
+</head>
+<body>
+    Redirecting…
+</body>
+</html>
